@@ -1,0 +1,49 @@
+.menu-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+}
+.emoji {
+  font-size: 70.72px;
+  line-height: 98px;
+  margin-right: 10px;
+}
+.info-container {
+}
+.name {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 17px;
+}
+.ingredients {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #8B8B8B;
+  margin: 10px 0;
+}
+.price {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 17px;
+}
+.add-btn {
+  position: absolute;
+  right: 0;
+  border: 1.5px solid #DEDEDE;
+  font-weight: lighter;
+  font-size: 22px;
+  line-height: 24px;
+  border-radius: 50%; 
+  width: 37px;
+  height: 38.5px;
+  background-color: white;
+  transition: all 300ms;
+  cursor: pointer;
+}
+.add-btn:hover {
+  transform: scale(1.2, 1.2);
+}

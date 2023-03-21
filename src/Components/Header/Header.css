@@ -1,0 +1,27 @@
+.header-container {
+  position: relative;
+}
+
+.header-img {
+  width: 100%;
+}
+
+.header-title {
+  position: absolute;
+  color: white;
+  font-weight: 400;
+  font-size: 39px;
+  line-height: 24px;
+  top : 30px;
+  left: 20px;
+}
+
+.header-params {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  color: white;
+  font-weight: 400;
+  font-size: 22.4216px;
+  line-height: 14px;
+}
