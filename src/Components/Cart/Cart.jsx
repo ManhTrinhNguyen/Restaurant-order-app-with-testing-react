@@ -3,7 +3,7 @@ import { Context } from '../Context/Context'
 import "./Cart.css"
 
 function Cart() {
-  const { cart, removeCart } = useContext(Context)
+  const { cart, removeCart, completeOrderFunction } = useContext(Context)
 
   
   function totalPriceFunc(arr) {
@@ -31,7 +31,7 @@ function Cart() {
         <h2>Total price:</h2>
         <span>${ totalPriceFunc(cart)}</span>
       </div>
-      <button className='complete-btn'>Complete Order</button>
+      <button onClick={completeOrderFunction} className='complete-btn'>Complete Order</button>
     </div>
    
   )

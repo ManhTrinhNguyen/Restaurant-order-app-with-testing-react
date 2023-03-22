@@ -2,7 +2,6 @@ form {
   display: flex;
   flex-direction: column;
   width: 90%;
-  border: 1px solid red;
   border-radius: 3px;
   z-index: 20;
   position: absolute;
@@ -10,6 +9,7 @@ form {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
+  filter: drop-shadow(5.18654px 5.18654px 255.437px rgba(0, 0, 0, 0.5));
 }
 form label {
   text-align: center;

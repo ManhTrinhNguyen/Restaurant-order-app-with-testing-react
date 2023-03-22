@@ -5,16 +5,20 @@ import Items from './Components/Items/Items';
 import Cart from "./Components/Cart/Cart"
 import { useContext } from 'react';
 import { Context } from './Components/Context/Context';
+import ThankyouPage from './Components/ThankyouPage/ThankyouPage';
+
 
 function App() {
-  const { cart } = useContext(Context)
+  const { cart, completeOrder, isPaid } = useContext(Context)
   
   return (
     <div className="App">
       <Header />
       <Items />
       {cart.length > 0 && <Cart />}
-      <CardDetails />
+      {/* {completeOrder && <CardDetails />}
+      {isPaid && <ThankyouPage />} */}
+      {isPaid ? <ThankyouPage /> : completeOrder && <CardDetails />}
     </div>
   );
 }

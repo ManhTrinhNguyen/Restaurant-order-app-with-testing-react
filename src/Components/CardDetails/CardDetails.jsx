@@ -1,33 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import "./CardDetails.css"
-import ThankyouPage from '../ThankyouPage/ThankyouPage'
+import { Context } from '../Context/Context'
 
 function CardDetails() {
-  const [infomation, setInfomation] = useState({
-    name: "",
-    cardNumber: "",
-    cardCVV : ""
-  })
-  
-  const handleChange = (e) => {
-    const { value, name } = e.target
-    setInfomation(prevValue => {
-      return {
-        ...prevValue,
-        [name]: value
-      }
-    })
-  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setInfomation(prevValue => {
-      return {
-        ...prevValue
-      }
-    })
-  }
-  console.log(infomation)
+  const {handleChange, handleSubmit, infomation, inputRef} = useContext(Context)
 
   return (
     <>
@@ -38,7 +15,9 @@ function CardDetails() {
           onChange={handleChange}
           value={infomation.name}
           name="name"
-          placeholder='Enter your name' />
+          placeholder='Enter your name'
+          ref={inputRef}
+        />
       
       <input
           type="text"
@@ -54,12 +33,12 @@ function CardDetails() {
           name="cardCVV"
           placeholder='Enter CVV' /> 
       <button
-        className='pay-btn'
+          className='pay-btn'
+          
         disabled={!infomation.name || !infomation.cardNumber || !infomation.cardCVV}
       >Pay</button>
       </form>
-      
-      <h1>{ infomation.name }</h1>
+    
     </>
     
   )

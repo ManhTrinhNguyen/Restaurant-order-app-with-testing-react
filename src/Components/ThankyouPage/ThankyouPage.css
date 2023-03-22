@@ -1,0 +1,14 @@
+.thankyou-container {
+  background-color: #ECFDF5;
+  width: 90%;
+  margin: 0 auto;
+  height: 100px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.thankyou-container h1 {
+  color: #065F46;
+  font-size: 20px;
+}
